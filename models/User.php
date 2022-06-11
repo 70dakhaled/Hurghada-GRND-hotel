@@ -60,5 +60,12 @@ class User extends Model
         }
         return $instance;
     }
+    
+    public function getPassword()
+    {
+        $user = $this;
+        $password = DB::query("SELECT password FROM users WHERE id=:id", array(':id' => $user->data["id"]));
+        return $password[0]["password"];
+    }
  
 }

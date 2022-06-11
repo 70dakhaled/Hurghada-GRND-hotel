@@ -3,10 +3,6 @@ require_once dirname(__FILE__) . '/Model.php';
 require_once dirname(__FILE__). '/ReservationRoom.php';
 require_once dirname(__FILE__) . '/Reservation.php';
 require_once dirname(__FILE__) . '/RoomPhoto.php';
-
-
-
-
 class Room extends Model{
     protected $table = "rooms";
     public $data;
@@ -57,7 +53,6 @@ class Room extends Model{
         }, $values);
         return $values;
     }
-
     public static function find($id){
         $instance = new self();
         $table = $instance->table;
@@ -96,7 +91,6 @@ class Room extends Model{
         return $data;
     }
     
-    
     public  static function allByType($type){
         $instance = new self();
         $table = $instance->table;
@@ -107,5 +101,14 @@ class Room extends Model{
         return $values;
     }
 
+    public static function homepage(){
+        $instance = new self();
+        $table = $instance->table;
+        $values = DB::query("SELECT r.*, t.name as room_type_name t.price FROM $table r, room_types t WHERE t.id = r.room_type_id");
+        $values = array_map(function($array){
+            return array_filter($array, function($key) { return gettype($key) != "integer"; }, ARRAY_FILTER_USE_KEY);
+        }, $values);
+        return $values;
+    }
 
 }
