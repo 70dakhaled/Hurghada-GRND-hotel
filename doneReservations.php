@@ -57,6 +57,7 @@ $reservations = $controller->show();
             $guests += $room["quantity_of_guests"];
         }
         ?>
+        
         <a href = 'details.php?id=<?=$reservation["id"]?>' class='card' id = 'card'>
              <div class='card-body'>
              <h5><?=count($reservation["rooms"]);?>Rooms, <?=$guests?>Guests</h5>

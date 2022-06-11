@@ -2,6 +2,7 @@
 require_once "controllers/PaymentController.php";
 $controller = new PaymentController();
 $result = $controller->add_payment();
+
 ?>
 
 <!DOCTYPE html>
@@ -131,7 +132,12 @@ $result = $controller->add_payment();
                 <div>
                     <button class="font-semibold bg-blue-600 px-10 py-3 text-white text-xl rounded-sm">Complete payment</button>
                 </div>
-                <h1 class="font-extrabold text-xl">TOTAL:₦2556.64</h1>
+
+                <h1 class="font-extrabold text-xl">TOTAL:$ <?php
+           // get price from session passed from page before
+               echo $_SESSION["price"];
+                ?> 
+                </h1>
             </div>
         </section>
     </main>

@@ -1,7 +1,7 @@
 <?php
 include "models/Room.php";
 require_once dirname(__FILE__) . '/controllers/RoomsController.php';
-$_SESSION['id']=1;
+$_SESSION['id'] = 1;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -55,7 +55,7 @@ $_SESSION['id']=1;
 
 
         ?>
-    
+
 
         <?php
         if (isset($_SESSION["id"])) {
@@ -72,14 +72,13 @@ $_SESSION['id']=1;
             <button class="btn log-in">log out</button>
         <?php
 
-        } else
-         {
+        } else {
         ?> <ul class="navbar">
                 <li><a href="#header">Home</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#rooms">Rooms</a></li>
                 <li><a href="#customers">Customers</a></li>
-               
+
             </ul>
             <?
             ?>
@@ -92,13 +91,13 @@ $_SESSION['id']=1;
         ?>
 
     </div>
-
-    <div class="head-bottom flex">
-        <h2 style="font-family: Dosis;">NICE AND COMFORTABLE PLACE TO STAY</h2>
-        <p>Grand Hotel is a quiet, comfortable hotel located in Hurghada. Hurghada GRND Hotel is one of the biggest Hotels in Hurghada. It has been operating in
-            Hurghada since 1910. It has several restaurants and activities. All rooms have private bathrooms with hot water. </p>
-        <button type="button" class="head-btn">GET STARTED</button>
-    </div>
+    <header>
+        <div class="head-bottom flex">
+            <h2 style="font-family: Dosis;">NICE AND COMFORTABLE PLACE TO STAY</h2>
+            <p>Grand Hotel is a quiet, comfortable hotel located in Hurghada. Hurghada GRND Hotel is one of the biggest Hotels in Hurghada. It has been operating in
+                Hurghada since 1910. It has several restaurants and activities. All rooms have private bathrooms with hot water. </p>
+            <button type="button" class="head-btn">GET STARTED</button>
+        </div>
     </header>
     <!-- end of header -->
 
@@ -276,6 +275,19 @@ $_SESSION['id']=1;
             }
 
             ?>
+            <br></br>
+            <div>
+
+                <h3 class="text-center">Register Now </h3>
+                <p>While they have plenty of individual hotels to highlight, I want to point out what I think Belmond does really well as a luxury hotel group: They transport you into the actual experience of each property.
+                    From the moment you land on their homepage, Belmond greets you with endless possibilities.
+                    One of my favorite features is actually an internal search function.
+                    Instead of simply listing off their hotels, Belmond opted to create a much more engaging way to discover their hotel properties and other travel experiences: Choose Your Own Adventure-style.</p>
+                <a href="register_1.php">
+                    <button type="button" class="btn btn-success">RESGITER NOW </button>
+                </a>
+            </div>
+
         </div>
     </section>
 
@@ -285,7 +297,8 @@ $_SESSION['id']=1;
             <div class="title">
                 <h2>customers</h2>
             </div>
-            <div class="customers-container">
+            <div class="">
+
                 <!-- single customer -->
                 <div class="customer">
                     <div class="rating">
@@ -297,7 +310,7 @@ $_SESSION['id']=1;
                     </div>
                     <h3>We Loved it</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat beatae veritatis provident eveniet praesentium veniam cum iusto distinctio esse, vero est autem, eius optio cupiditate?</p>
-                    <img src="img/cus1.jpg" alt="customer image">
+                    <img src="images/cus1.jpg" alt="customer image">
                     <span>Customer Name, Country</span>
                 </div>
                 <!-- end of single customer -->
@@ -312,7 +325,7 @@ $_SESSION['id']=1;
                     </div>
                     <h3>Comfortable Living</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat beatae veritatis provident eveniet praesentium veniam cum iusto distinctio esse, vero est autem, eius optio cupiditate?</p>
-                    <img src="img/cus2.jpg" alt="customer image">
+                    <img src="images/cus2.jpg" alt="customer image">
                     <span>Customer Name, Country</span>
                 </div>
                 <!-- end of single customer -->
@@ -327,7 +340,7 @@ $_SESSION['id']=1;
                     </div>
                     <h3>Nice Place</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat beatae veritatis provident eveniet praesentium veniam cum iusto distinctio esse, vero est autem, eius optio cupiditate?</p>
-                    <img src="img/cus1.jpg" alt="customer image">
+                    <img src="images/cus1.jpg" alt="customer image">
                     <span>Customer Name, Country</span>
                 </div>
                 <!-- end of single customer -->

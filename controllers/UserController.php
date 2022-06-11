@@ -15,11 +15,15 @@ class UserController
     {
         if (isset($_POST["submit"])) {
             $validation_message = "";
-            if (!isset($_POST['name']) || empty($_POST['name'])) {
+            if (is_numeric($_POST['name']) || empty($_POST['name'])) {
                 $validation_message .= "Please enter a valid name\n";
             }
             if (User::findbyemail($_GET['email'])) {
                 $validation_message = "user already exist\n";
+            }
+            if ($_POST['password2']!=$_POST['password1']){
+
+                $validation_message="confirm password must be equal to password\n";
             }
 
 
