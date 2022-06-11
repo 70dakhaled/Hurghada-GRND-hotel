@@ -17,17 +17,14 @@ $ActivityLog=new ActivityLog();
 $ActivityLog->data["user_id"]=$c;
 $ActivityLog->data["action"]=$a;
 $ActivityLog->data["description"] = $b;
-        if ($ActivityLog->save()) {
+        // if ($ActivityLog->save()) {
            
-            return true;
+        //     return true;
             
-        }return false;
+        // }return false;
 }
 
 
 
 
 }
-
-
-?>

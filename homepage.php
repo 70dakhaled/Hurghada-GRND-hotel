@@ -1,8 +1,7 @@
 <?php
 include "models/Room.php";
 require_once dirname(__FILE__) . '/controllers/RoomsController.php';
-session_start();
-$_SESSION['id'] = 1;
+$_SESSION['id']=1;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -56,23 +55,34 @@ $_SESSION['id'] = 1;
 
 
         ?>
-        <ul class="navbar">
-            <li><a href="#header">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#rooms">Rooms</a></li>
-            <li><a href="#customers">Customers</a></li>
-            <li><a href="#customers">Reservation in progress</a></li>
-            <li><a href="#customers">Done reservation</a></li>
-        </ul>
+    
 
         <?php
         if (isset($_SESSION["id"])) {
-        ?>
+        ?> <ul class="navbar">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#rooms">Rooms</a></li>
+                <li><a href="#customers">Customers</a></li>
+                <li><a href="#customers">Reservation in progress</a></li>
+                <li><a href="#customers">Done reservation</a></li>
+            </ul>
+            <?
+            ?>
             <button class="btn log-in">log out</button>
         <?php
 
-        } else {
-        ?>
+        } else
+         {
+        ?> <ul class="navbar">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#rooms">Rooms</a></li>
+                <li><a href="#customers">Customers</a></li>
+               
+            </ul>
+            <?
+            ?>
             <button class="btn log-in">log in</button>
             <button class="btn log-in">signup</button>
         <?php
@@ -100,7 +110,7 @@ $_SESSION['id'] = 1;
         <br>
         <br>
         <div class="w-50 h-50" style="align-content: center;">
-            <img class="img-fluid rounded" src="images/bestprofilepic.jpg" alt="profile">
+            <img class="img-fluid rounded" src="images/'cus2.jpg" alt="profile">
         </div>
         <ul class="navbar">
             <li><a href="#header">Home</a></li>
@@ -254,7 +264,7 @@ $_SESSION['id'] = 1;
                         <p class="rate">
                             <span><?= $rooms[$i]["price"]; ?></span> Per Night
                         </p>
-                        <a href="roomDetails.php?id=<?=$rooms[$i]["id"]?>">
+                        <a href="roomDetails.php?id=<?= $rooms[$i]["id"] ?>">
                             <button class="btn">
                                 Show Details
                             </button>

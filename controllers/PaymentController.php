@@ -30,7 +30,7 @@ class PaymentController
             
             else { //if all validations are complete proceed to database
                 
-
+                
                 $user_id = $_SESSION['id'];
                 $card_holder = $_POST['card_holder'];
                 $creditcard_number = $_POST['creditcard_number'];
@@ -52,6 +52,7 @@ class PaymentController
                     return true;
                     header("Location: homepage.php");
                 }
+                ActivityLogController::makelog("payment", "", $user_id);
             }
            
 
@@ -63,7 +64,7 @@ class PaymentController
         //make function types the pricce paid 
 
         //funciton log (action,description,id)
-        ActivityLogController::makelog("payment", "", $$_SESSION['id']);
+       
 
         return false;
     }

@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 require_once dirname(__FILE__) . '/../classes/DB.php';
 require_once dirname(__FILE__) . '/../classes/functions.php';
 
