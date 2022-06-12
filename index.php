@@ -34,7 +34,7 @@ $_SESSION['id'] = 1;
         <div class="head-bottom flex">
             <h2>NICE AND COMFORTABLE PLACE TO STAY</h2>
             <p>Grand Hotel is a quiet, comfortable hotel located near the Ecological Sanctuary and the Monteverde Butterfly Gardens in an area called Cerro Plano, an ideal location half way between the Monteverde Cloud Forest reserve and the main village of the Monteverde area (Santa Elena), in close proximity to several restaurants and activities. All rooms have private bathrooms with hot water. </p>
-            <button type="button" class="head-btn">GET STARTED</button>
+            <!-- <button type="button" class="head-btn">GET STARTED</button> -->
         </div>
     </header>
     <!-- end of header -->
@@ -53,9 +53,9 @@ $_SESSION['id'] = 1;
             <br>
             <br>
             <div class="w-50 h-50" style="align-content: center;">
-                <img class="img-fluid rounded" src="./images/default_profile.jpg" alt="profile"  style="height:150px;">
-                <a href="profile.php" >
-                    <h2 ><?= $user->data["name"] ?></h2>
+                <img class="img-fluid rounded" src="./images/default_profile.jpg" alt="profile" style="height:150px;">
+                <a href="profile.php">
+                    <h2><?= $user->data["name"] ?></h2>
                 </a>
             </div>
             <ul class="navbar">
@@ -323,7 +323,7 @@ $_SESSION['id'] = 1;
                                 <i class="fas fa-map-marker-alt"></i>
                             </span>
                             <span>
-                                203 Fake St.Mountain View, San Francisco, California, USA
+                                The Grand Hotel, Promenade، Hurghada, Red Sea Governorate 84517
                             </span>
                         </div>
                         <div class="contact-item">
