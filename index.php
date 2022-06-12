@@ -1,6 +1,9 @@
 <?php
 include "models/Room.php";
-
+require 'controllers/ProfileController.php';
+$controller = new ProfileController();
+$user = $controller->showData();
+$_SESSION['id'] = 1;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -50,14 +53,17 @@ include "models/Room.php";
             <br>
             <br>
             <div class="w-50 h-50" style="align-content: center;">
-                <!-- <img  class="img-fluid rounded" src="" alt="profile" > -->
+                <img class="img-fluid rounded" src="./images/default_profile.jpg" alt="profile"  style="height:150px;">
+                <a href="profile.php" >
+                    <h2 ><?= $user->data["name"] ?></h2>
+                </a>
             </div>
             <ul class="navbar">
                 <li><a href="#header">Home</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#rooms">Rooms</a></li>
                 <li><a href="#customers">Customers</a></li>
-                <li><a href="#customers">Done Reservation</a></li>
+                <li><a href="doneReservations.php">Done Reservation</a></li>
                 <li><a href="create-reservation.php">book now</a></li>
 
             </ul>

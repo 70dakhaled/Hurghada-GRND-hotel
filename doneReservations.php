@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 require 'controllers/ReservationsController.php';
 $controller = new ReservationsController();
 $reservations = $controller->show();

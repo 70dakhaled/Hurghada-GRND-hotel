@@ -114,7 +114,7 @@ class ReservationsController
             return $reservation->data["id"];
         }
         return false;
-        //funciton log (action,description,id)
+        // //funciton log (action,description,id)
         ActivityLogController::makelog("room created", "", $$_SESSION['id']);
     }
 
