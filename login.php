@@ -38,20 +38,10 @@ include('includes/head.php');
 								<div class="form-group">
 									<button type="submit" name="login" class="form-control btn btn-primary submit px-3">Sign In</button>
 								</div>
-								<a href="#">
+								<a href="signup.php">
 									<h3 class="mb-4 text-center text-xl">Create account</h3>
 								</a>
 
-								<div class="form-group d-md-flex">
-									<div class="w-50">
-										<label class="checkbox-wrap checkbox-primary">Remember Me
-											<input type="checkbox" checked>
-											<span class="checkmark"></span>
-										</label>
-									</div>
-									<div class="w-50 text-md-right">
-										<a href="#" style="color: #fff">Forgot Password</a>
-									</div>
 								</div>
 							</form>
 
